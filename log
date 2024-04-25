@@ -104,3 +104,15 @@ Thu 25 Apr 2024 12:47:00 AM UTC:
  tests:  1|6
 total_score: 10/70
 ce39153
+Thu 25 Apr 2024 12:51:10 AM UTC: 
+ hashmap.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c:66:11: error: redefinition of ‘createMap’
+   66 | HashMap * createMap(long capacity) {
+      |           ^~~~~~~~~
+hashmap.c:40:11: note: previous definition of ‘createMap’ with type ‘HashMap *(long int)’ {aka ‘struct HashMap *(long int)’}
+   40 | HashMap * createMap(long capacity)
+      |           ^~~~~~~~~
+Compilation failed
+bd7f839
