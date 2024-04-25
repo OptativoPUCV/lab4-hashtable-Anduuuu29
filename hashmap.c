@@ -93,7 +93,6 @@ Pair * searchMap(HashMap * map,  char * key)
     }
   }
   map->current = pos;
-  return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
