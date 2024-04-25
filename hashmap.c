@@ -44,11 +44,10 @@ void insertMap(HashMap * map, char * key, void * value) {
   int i = 0;
   while(map->buckets[pos]!=NULL && map->buckets[pos]->key!=NULL)
     {
-      if(map->buckets[pos + i] == NULL && map->buckets[pos + i]->key == NULL)
+      if(map->buckets[pos + i] == NULL || map->buckets[pos + i]->key == NULL)
       {
         map->buckets[pos + i] = createPair(key, value);
         map->size++;
-        
       }
         
     }
