@@ -122,11 +122,12 @@ Pair * nextMap(HashMap * map) {
     exit(EXIT_FAILURE);
   for(int i = map->current + 1; i < map->capacity; i++)
     {
-      if(map->buckets[i] != NULL)
+      if(map->buckets[i] != NULL && map->buckets[i]->key != NULL)
       {
         map->current = i;
         return map->buckets[i];
       }
+      
     }
   return map->buckets[map->current];
 }
