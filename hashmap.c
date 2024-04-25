@@ -47,13 +47,13 @@ void insertMap(HashMap * map, char * key, void * value) {
       {
         map->buckets[pos]->value=value;
       }
-      pos++;
       pos = (pos+1)%map->capacity;
     }
   if(map->buckets[pos]==NULL)
   {
     map->buckets[pos]=createPair(key,value);
     map->size++;
+    map->current++;
   }
   
 }
@@ -111,10 +111,7 @@ Pair * searchMap(HashMap * map,  char * key)
 
 
 Pair * firstMap(HashMap * map) {
-  while(map->current == -1)
-    {
-      
-    }
+  return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
