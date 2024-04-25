@@ -70,9 +70,12 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-
-
-    return NULL;
+  Pair *actual = map->buckets[hash(key,map->capacity)];
+  if(strcmp(actual->key, key) == 0)
+  {
+    return actual->value;
+  }
+  return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
