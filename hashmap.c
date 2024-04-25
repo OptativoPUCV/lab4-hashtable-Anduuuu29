@@ -123,6 +123,10 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
+  if(map->current+1 < map->capacity)
+  {
+    map->current++;
+    return map->buckets[map->current];
+  }
     return NULL;
 }
