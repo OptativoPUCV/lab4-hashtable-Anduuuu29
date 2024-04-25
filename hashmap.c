@@ -81,6 +81,7 @@ Pair * searchMap(HashMap * map,  char * key)
       return map->buckets[pos];
     }
   }
+  map->current = pos;
   return NULL;
 }
 
