@@ -50,12 +50,12 @@ void insertMap(HashMap * map, char * key, void * value) {
       pos++;
       if(pos == map->capacity)
         pos = 0;
-      if(map->buckets[pos]==NULL)
-      {
-        map->buckets[pos]=createPair(key,value);
-        map->size++;
-      }
     }
+  if(map->buckets[pos]==NULL)
+  {
+    map->buckets[pos]=createPair(key,value);
+    map->size++;
+  }
   
 }
 
