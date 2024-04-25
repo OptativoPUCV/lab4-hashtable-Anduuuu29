@@ -45,19 +45,8 @@ void insertMap(HashMap * map, char * key, void * value) {
   {
     map->buckets[pos]=createPair(key,value);
     map->size++;
+    map->current = -1;
   }
-  else
-  {
-    for(int i = pos; i < map->capacity; i++)
-      {
-        if(map->buckets[i] == NULL)
-        {
-          map->buckets[i]=createPair(key,value);
-          map->size++;
-        }
-        
-      }
-
 }
 
 void enlarge(HashMap * map) {
