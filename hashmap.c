@@ -111,6 +111,14 @@ Pair * searchMap(HashMap * map,  char * key)
 
 
 Pair * firstMap(HashMap * map) {
+  while(map->buckets != NULL)
+    {
+      if(map->buckets[map->current+1]== NULL)
+      {
+        return map->buckets[map->current];
+      }
+      map->current++;     
+    }
   return NULL;
 }
 
