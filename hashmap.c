@@ -110,7 +110,9 @@ Pair * searchMap(HashMap * map,  char * key)
       if(pos == map->capacity)
         pos = 0;
     }
+  return NULL;
 }
+
 
 Pair * firstMap(HashMap * map) {
 
