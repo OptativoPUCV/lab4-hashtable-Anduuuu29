@@ -116,3 +116,9 @@ hashmap.c:40:11: note: previous definition of ‘createMap’ with type ‘HashM
       |           ^~~~~~~~~
 Compilation failed
 bd7f839
+Thu 25 Apr 2024 12:51:59 AM UTC: 
+ hashmap.c | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
+ tests:  2|5
+total_score: 20/70
+1088774
