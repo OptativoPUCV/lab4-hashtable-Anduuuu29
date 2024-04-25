@@ -40,19 +40,7 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-    int pos = hash(key,map->capacity);
-    int i = 0;
-    while(map->buckets[pos + i]!=NULL && map->buckets[pos+ i]->key!=NULL)
-    {
-        if(map->buckets[pos + i] == NULL || map->buckets[pos + i]->key == NULL)
-        {
-            map->buckets[pos + i] = createPair(key, value);
-            map->size++;
-            break;
-        }
-
-    }
-
+  
 }
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
@@ -89,16 +77,15 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) 
 {
 
-  
   int pos = hash(key,map->capacity);
   if(map->buckets[pos]!=NULL)
   {
     if(is_equal(map->buckets[pos]->key,key))
     {
       return map->buckets[pos];
+      map->current = pos;
     }
   }
-  map->current = pos;
   return NULL;
 }
 
