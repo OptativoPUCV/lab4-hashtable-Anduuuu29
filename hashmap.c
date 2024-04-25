@@ -48,6 +48,8 @@ void insertMap(HashMap * map, char * key, void * value) {
         map->buckets[pos]->value=value;
       }
       pos++;
+      if(pos==map->capacity)
+        pos = 0;
     }
   if(map->buckets[pos]==NULL)
   {
