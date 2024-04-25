@@ -45,7 +45,6 @@ void insertMap(HashMap * map, char * key, void * value) {
   {
     map->buckets[pos]=createPair(key,value);
     map->size++;
-    map->current = -1;
   }
 }
 
@@ -62,7 +61,6 @@ HashMap * createMap(long capacity) {
   map->size = 0;
   map->capacity = capacity;
   map->current = -1;
-
   return map;
 }
 
