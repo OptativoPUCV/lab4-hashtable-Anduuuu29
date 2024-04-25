@@ -342,3 +342,14 @@ Thu 25 Apr 2024 09:40:58 PM UTC:
  tests:  13|1
 total_score: 60/70
 1936506
+Thu 25 Apr 2024 09:42:32 PM UTC: 
+ hashmap.c | 9 +--------
+ 1 file changed, 1 insertion(+), 8 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+ea37867
